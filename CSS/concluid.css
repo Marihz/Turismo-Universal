@@ -1,0 +1,52 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+}
+header {
+  background-color: #007acc;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.logoT {
+  width: 70px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #ffffff;
+}
+
+p {
+  font-size: 18px;
+}
+
+#reservation-details {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.footer {
+  background-color: #007acc;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1em 0;
+
+  margin-top: 30%;
+}

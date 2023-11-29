@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="../CSS/perfil.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Perfil Usuário</title>
+  </head>
+  <header>
+    <nav class="navigation">
+      <a href="./index.html">
+        <img src="../img/logo1.png" alt="logo" class="logoT" />
+      </a>
+      <a href="./index.html" class="logo"
+        >T<span class="logo-span">uri</span>smo Uni<span class="logo-span"
+          >ver</span
+        >sal</a
+      >
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item"><a href="signIn.html">Login</a></li>
+        <li class="nav-item"><a href="help.html">Help</a></li>
+        <i class="bx bx-search"></i>
+      </ul>
+      <div class="hamburguer">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+    <section class="seccion-perfil-usuario">
+      <div class="perfil-usuario-header">
+        <div class="perfil-usuario-portada">
+          <div class="perfil-usuario-avatar">
+            <img src="../img/avatar.jpg" alt="avatar" />
+            <button type="button" class="boton-avatar" id="uploadBtn">
+              <input type="file" id="fileInput" style="display: none" />
+              <i class="far fa-image"></i>
+            </button>
+          </div>
+          <button type="button" class="boton-avatar" id="uploadBtn">
+     
+        </div>
+      </div>
+      <div class="perfil-usuario-body">
+        <div class="perfil-usuario-bio">
+          <h3 class="titulo">Usuário</h3>
+          <p class="texto"></p>
+        </div>
+        <div class="perfil-usuario-footer">
+          <ul class="lista-datos">
+            <li><i class="icono fas fa-map-signs"></i>Direção do Usuário:</li>
+            <li><i class="icono fas fa-phone-alt"></i> Telefone:</li>
+            <li><i class="icono fas fa-briefcase"></i> Trabalha em:</li>
+          </ul>
+          <ul class="lista-datos">
+            <li><i class="icono fas fa-map-marker-alt"></i> Localização:</li>
+            <li>
+              <i class="icono fas fa-calendar-alt"></i>Data de nascimento.
+            </li>
+            <li><i class="icono fas fa-user-check"></i> Registro:</li>
+            <li><i class="icono fas fa-share-alt"></i> Redes sociais:</li>
+          </ul>
+        </div>
+        <div class="redes-sociales">
+          <a href="" class="boton-redes facebook fab fa-facebook-f"
+            ><i class="icon-facebook"></i
+          ></a>
+          <a href="" class="boton-redes twitter fab fa-twitter"
+            ><i class="icon-twitter"></i
+          ></a>
+          <a href="" class="boton-redes instagram fab fa-instagram"
+            ><i class="icon-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="./index.html">
+        <img src="../img/logo1.png" alt="logo" class="logoT" />
+      </a>
+      <p>&copy; 2023 Reservas de Hotel. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../JS/perfil.js"></script>
+  </body>
+</html>

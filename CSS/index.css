@@ -1,0 +1,306 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: white;
+  text-align: center;
+  padding: 34px 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 18px 40px;
+  justify-content: space-between;
+  box-shadow: 0 0.1rem 0.5rem rgb(207, 143, 14);
+  background: white;
+  transition: all 0.5s;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Defina um valor de z-index alto para garantir que o menu fique acima do conteúdo */
+}
+
+/* Pai e filho */
+.navigation .logo {
+  color: #007acc;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo .logo-span {
+  color: #ffa500;
+}
+
+.navigation .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.nav-menu .nav-item a {
+  color: #ffa500;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 0.5s;
+}
+
+.nav-menu .nav-item a:hover {
+  color: #007acc;
+}
+
+.nav-menu i {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.hamburguer {
+  cursor: pointer;
+  display: none;
+  padding-right: 30px;
+  z-index: 1001; /* Defina um valor de z-index superior ao do menu para garantir que o ícone hambúrguer fique acima */
+}
+
+.hamburguer .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: #ffa500;
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+
+.hamburguer .bar:nth-child(1),
+.hamburguer .bar:nth-child(3) {
+  background: #007acc;
+}
+
+.intruduction {
+  background: url("../img/pexels-francesco-ungaro-11575081.jpg") center/cover;
+  position: relative;
+  z-index: 1; /* Defina um valor de z-index menor do que o do menu para garantir que fique abaixo do menu */
+}
+
+.intruduction::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(83, 82, 82, 0.5); /* Cor branca com 50% de opacidade */
+  z-index: -1; /* Defina um valor de z-index menor do que o do menu para garantir que fique abaixo do menu */
+}
+.logoT {
+  width: 70px;
+  height: 60px;
+  cursor: pointer;
+}
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 120px 0;
+  z-index: 2; /* Defina um valor de z-index maior do que o do menu para garantir que fique acima do menu */
+}
+
+/* Estilos para o conteúdo da seção .hero */
+
+.hero h2 {
+  color: #129efb;
+  font-size: 50px;
+}
+
+.hero p {
+  color: white;
+  font-size: 18px;
+}
+#title {
+  text-align: center;
+  padding: 20px;
+}
+
+.icons {
+  width: 100%;
+  position: absolute;
+  color: #074e7d;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  padding-right: 40px;
+  height: 120px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 12px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+.room-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px;
+  align-items: center;
+}
+
+.room {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  text-align: center;
+}
+
+.room img {
+  width: 100%; /* Faça as imagens ocuparem 100% da largura do contêiner .room */
+  height: auto; /* Mantenha a proporção original da imagem */
+  max-height: 160px; /* Defina uma altura máxima para evitar */
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ffa500;
+  color: white;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #007acc;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  margin-top: 30%;
+}
+
+/*responsividade e menu*/
+
+@media (max-width: 760px) {
+  .navigation {
+    padding: 20px 20px;
+  }
+  .hamburguer {
+    display: block;
+  }
+  .hamburguer.ativo .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburguer.ativo .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.ativo .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    right: -100%;
+    top: 82px;
+    height: 900%;
+    width: 100%;
+    flex-direction: column;
+    background: rgb(23, 97, 147);
+    gap: -10px;
+    transition: 0.3s;
+  }
+  .nav-menu.ativo {
+    right: 0;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/reserva.css" />
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+
+    <title>Turismo Universal</title>
+  </head>
+  <header>
+    <nav class="navigation">
+      <a href="#" class="logo"
+        >T<span class="logo-span">uri</span>smo Uni<span class="logo-span"
+          >ver</span
+        >sal</a
+      >
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="./index.html">Home</a></li>
+        <li class="nav-item"><a href="./about.html">About</a></li>
+        <li class="nav-item"><a href="./signIn.html">Login</a></li>
+        <li class="nav-item"><a href="./help.html">Help</a></li>
+        <i class="bx bx-search"></i>
+      </ul>
+      <div class="hamburguer">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+
+    <h1>Reservas de Viagens</h1>
+
+    <div class="container">
+      <form id="reservation-form">
+        <label for="destination">Destino:</label>
+        <input
+          type="text"
+          id="destination"
+          name="destination"
+          placeholder="Informe o destino"
+          required
+        />
+
+        <label for="fullName">Pacote:</label>
+        <input type="text" id="fullName" required /><br /><br />
+
+        <label for="fullName">Nome Completo:</label>
+        <input type="text" id="fullName" required /><br /><br />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required /><br /><br />
+        <label for="phoneNumber">Telefone:</label>
+        <input type="tel" id="phoneNumber" required /><br /><br />
+
+
+        <label for="phoneNumber">Endereço:</label>
+        <input type="text" id="phoneNumber" required /><br /><br />
+
+  
+        <label for="check-in">Check-in:</label>
+        <input type="date" id="check-in" name="check-in" required />
+
+        <label for="check-out">Check-out:</label>
+        <input type="date" id="check-out" name="check-out" required />
+
+        <h2>Forma de pagamento</h2>
+
+        <label for="cardType">Tipo de Cartão:</label>
+        <select id="cardType" name="cardType" required>
+        <option value="visa">Visa</option>
+       <option value="mastercard">MasterCard</option>
+
+       <label for="creditCardNumber"> Número do Cartão de Crédito:</label>
+       <input
+         type="text"
+         id="creditCardNumber"
+         name="creditCardNumber"
+         placeholder="**** **** **** ****"
+         required
+       />
+
+        
+
+  <!-- Adicione mais opções conforme necessário -->
+</select>  
+      
+      <!-- Pergunta sobre deficiência -->
+    <label for="hasDisability">Você possui alguma deficiência?</label>
+    <select id="hasDisability" onchange="toggleDisabilityFields()">
+      <option value="no">Não</option>
+      <option value="yes">Sim</option>
+    </select>
+
+    <!-- Campos adicionais para deficiência (inicialmente ocultos) -->
+    <div id="disabilityFields" style="display: none;">
+      <label for="disabilityType">Qual deficiência você possui?</label>
+      <input type="text" id="disabilityType" name="disabilityType" />
+
+      <label for="limitations">Quais são suas limitações?</label>
+      <input type="text" id="limitations" name="limitations" />
+
+      <label for="specialAssistance">Como podemos te oferecer uma viagem tranquila?</label>
+      <textarea id="specialAssistance" name="specialAssistance"></textarea>
+    </div>
+    
+    <input id="button" type="submit" value="Enviar Reserva" />
+  </form>
+
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2023 Reservas de Viagens</p>
+    </div>
+
+    <script src="../JS/reserva.js"></script>
+  </body>
+</html>

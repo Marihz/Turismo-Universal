@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/destinos.css" />
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon" />
+    <title>Viajens Disponíveis</title>
+  </head>
+  <header>
+    <h1>Viajens Disponíveis</h1>
+  </header>
+
+  <body>
+    <div class="container">
+      <form id="availability-form">
+        <label for="destination">Destino:</label>
+        <input
+          type="text"
+          id="destination"
+          name="destination"
+          placeholder="Informe o destino"
+          required
+        />
+
+        <label for="month">Mês da Viagem:</label>
+        <input type="month" id="month" name="month" required />
+
+        <button type="button" id="buscarDisponibilidade">
+          Buscar Disponibilidade
+        </button>
+
+        <button type="button" id="reservaButton" style="display: none">
+          Reservar
+        </button>
+
+        <div id="calendario"></div>
+      </form>
+    </div>
+
+    <footer>
+      <a href="../HTML/index.html">
+        <img src="../img/logo1.png" alt="logo" class="logoT" />
+      </a>
+      <p>&copy; 2023 Reservas de Hotel. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="nacional.js"></script>
+  </body>
+</html>
